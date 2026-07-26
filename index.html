@@ -1,23 +1,866 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://analysis.reliabledone.com/car-insurance-rate/#webpage",
+                "url": "https://analysis.reliabledone.com/car-insurance-rate/",
+                "name": "2026년 자동차 보험 인상률 계산기 및 연령별 차종별 상세 가이드",
+                "description": "2026년 최신 보험 요율을 반영한 자동차 보험 인상률 계산기입니다. 20대 초반 아반떼 첫차 가입 가격부터 50대 그랜저 하이브리드 최저가 비용까지, 사고 이력 및 할인 특약에 따른 예상 인상 금액을 한눈에 산출하고 장단점을 비교분석합니다."
+            },
+            {
+                "@type": "Article",
+                "@id": "https://analysis.reliabledone.com/car-insurance-rate/#article",
+                "isPartOf": {
+                    "@id": "https://analysis.reliabledone.com/car-insurance-rate/#webpage"
+                },
+                "headline": "자동차 보험 인상률 계산기: 사고 이력 및 연령별 보험료 변동 예측 가이드",
+                "description": "사고 후 할증률과 나이, 차종에 따른 자동차 보험료 인상 수준을 정확히 계산하는 방법과 다이렉트 최저가 비교 팁을 제공합니다.",
+                "datePublished": "2026-04-18T18:00:00+09:00",
+                "dateModified": "2026-07-26T14:00:00+09:00",
+                "author": {
+                    "@type": "Organization",
+                    "name": "자동차 보험 분석 연구소"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "자동차 보험 분석 연구소"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* CSS Reset avoiding the universal asterisk selector */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video, input, select, textarea {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            background-color: #f5f7fa;
+            color: #2c3e50;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3a6073, #3a7bd5);
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid #2b5f8c;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 5px 15px;
+        }
+
+        nav a {
+            color: #3a6073;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #3a7bd5;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+            padding: 40px;
+            margin-bottom: 35px;
+            border-left: 6px solid #3a7bd5;
+        }
+
+        section.accent-section {
+            border-left-color: #5a8f76;
+        }
+
+        h2 {
+            color: #1e3a5f;
+            font-size: 1.7em;
+            border-bottom: 2px solid #e1e6eb;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: #2b5f8c;
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background-color: #f0f4f8;
+            border-left: 4px solid #3a7bd5;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        .green-box {
+            background-color: #edf5f1;
+            border-left: 4px solid #5a8f76;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+        }
+
+        th {
+            background-color: #e8ecf1;
+            color: #1e3a5f;
+            font-weight: 600;
+            padding: 12px 10px;
+            border-bottom: 2px solid #cbd5e1;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #e1e6eb;
+            color: #334155;
+        }
+
+        tr:hover {
+            background-color: #f8fafc;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: #d38562;
+            color: #ffffff;
+            padding: 15px 35px;
+            font-size: 1.1em;
+            font-weight: 600;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(211, 133, 98, 0.3);
+        }
+
+        .btn-cta:hover {
+            background-color: #b97c69;
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+            min-width: 240px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #34495e;
+            font-size: 0.95em;
+        }
+
+        input[type="text"], input[type="tel"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            background-color: #ffffff;
+            color: #2c3e50;
+            font-size: 0.95em;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #3a7bd5;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(58, 123, 213, 0.15);
+        }
+
+        /* Pure CSS Chart */
+        .chart-container {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .chart-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .chart-label {
+            width: 200px;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .chart-bar-wrapper {
+            flex-grow: 1;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            height: 24px;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .chart-bar {
+            height: 100%;
+            border-radius: 4px;
+            text-align: right;
+            padding-right: 10px;
+            color: #ffffff;
+            font-size: 0.8em;
+            font-weight: 600;
+            line-height: 24px;
+        }
+
+        .chart-value {
+            width: 70px;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-align: right;
+            color: #1e3a5f;
+        }
+
+        /* Lists */
+        ul.styled-list, ol.styled-list {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        ul.styled-list li {
+            list-style-type: square;
+            margin-bottom: 10px;
+            color: #334155;
+        }
+
+        ol.styled-list li {
+            list-style-type: decimal;
+            margin-bottom: 10px;
+            color: #334155;
+        }
+
+        .anchor {
+            display: block;
+            position: relative;
+            top: -100px;
+            visibility: hidden;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9em;
+            border-top: 5px solid #1e2b37;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #d38562;
+            text-decoration: none;
+        }
+
+        @media(max-width: 768px) {
+            header h1 { font-size: 1.8em; }
+            section { padding: 25px; }
+            .form-row { flex-direction: column; gap: 0; }
+            .chart-row { flex-direction: column; align-items: flex-start; }
+            .chart-label { width: 100%; margin-bottom: 5px; }
+            .chart-bar-wrapper { width: 100%; margin-right: 0; margin-bottom: 5px; }
+            .chart-value { width: 100%; text-align: left; }
+            th, td { padding: 8px 5px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>2026년 기준 자동차 보험 인상률 계산기</h1>
+        <p>사고 발생 후 예상 할증 요율부터 연령별, 차종별 표준 요금 변화까지 세밀하게 분석하고 설계하는 지능형 모의 시뮬레이터입니다.</p>
+    </header>
+
+    <nav aria-label="메인 메뉴">
+        <ul>
+            <li><a href="#intro-section">요율 관리의 중요성</a></li>
+            <li><a href="#calculator-section">실시간 모의 계산기</a></li>
+            <li><a href="#chart-section">할증률 지표 분석</a></li>
+            <li><a href="#matrix-section">연령별 차종별 가이드</a></li>
+            <li><a href="#strategy-section">다이렉트 설계 가이드</a></li>
+            <li><a href="#source-section">공식 신뢰 출처</a></li>
+            <li><a href="#faq-section">자주 묻는 질문</a></li>
+            <li><a href="#consulting-section">상담 및 요율 진단</a></li>
+        </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <div class="container">
+
+        <section id="intro-section">
+            <span id="intro-anchor" class="anchor"></span>
+            <h2>2026년 변화하는 자동차 보험 시장과 인상 요율 관리의 필요성</h2>
+            <p>
+                자동차를 소유한 운전자라면 누구나 매년 갱신 시기마다 부과되는 보험료에 대해 깊은 관심을 가질 수밖에 없습니다. 특히 갑작스러운 사고를 겪은 후라면 다음 갱신 때 내 보험료가 과연 <strong>얼마</strong>나 인상될지, 구체적인 할증 <strong>금액</strong>과 <strong>예상</strong> <strong>가격</strong> 변동 폭은 어느 정도일지 우려하게 마련입니다. 이러한 상황에서 객관적인 데이터를 바탕으로 가입자의 현재 상황을 분석하고 위험 요율을 산출해 주는 도구가 바로 <strong>자동차 보험 인상률 계산기</strong>입니다.
+            </p>
+            <div class="highlight-box">
+                <strong>핵심 동향 분석:</strong> 2026년도 손해율 통계에 따르면 친환경 하이브리드 차량의 보급 확대와 고가 수입차의 점유율 증가로 인해 전반적인 부품 단가 및 정비 요금이 동반 상승하였습니다. 이에 따라 보험사들은 사고 이력이 있는 가입자에 대한 할증 요율을 세분화하여 적용하고 있으며, 법규 위반 기록에 따른 패널티도 한층 강화되었습니다.
+            </div>
+            <p>
+                현재 국내 시장에는 수많은 <strong>다이렉트</strong> 비교 <strong>사이트</strong>와 스마트폰 <strong>어플</strong> 혹은 금융 <strong>앱</strong>들이 출시되어 가입자 확보 경쟁을 벌이고 있습니다. 각 금융 플랫폼이나 대기업 제휴 채널에서는 신규 가입자를 유치하기 위해 풍성한 <strong>사은품</strong>, <strong>혜택</strong>, <strong>상품권</strong> 제공뿐만 아니라 카드사 연계 <strong>현금지원</strong>, <strong>지원금</strong> 지급 <strong>이벤트</strong>를 활발히 펼치고 있습니다. 이러한 정보들은 <strong>네이버</strong> 블로그, <strong>구글</strong> 검색 결과, <strong>유튜브</strong> 영상 분석 자료를 비롯하여 <strong>트위터</strong>, <strong>인스타그램</strong>, <strong>페이스북</strong> 등 소셜 미디어를 통해 활발히 유통됩니다. 또한, 보다 실시간의 디테일한 계약 조건이나 요율 우회 방법은 <strong>카카오톡</strong> 오픈채팅방, <strong>텔레그램</strong> 커뮤니티, 그리고 자산관리 플랫폼인 <strong>토스</strong> 등의 알림 서비스를 통해 전파되기도 합니다. 최근에는 첨단 IT 기술의 발달로 <strong>제미나이</strong>나 <strong>챗지피티</strong> 같은 고도화된 <strong>AI</strong> 엔진을 활용하여 개개인의 과거 운전 경력과 사고 정보를 분석하고 최적의 대안을 설계해 주는 스마트한 자문 사례도 급증하고 있습니다.
+            </p>
+        </section>
+
+        <section id="calculator-section" class="accent-section">
+            <span id="calculator-anchor" class="anchor"></span>
+            <h2>실시간 모의 자동차 보험 인상률 계산기</h2>
+            <p>
+                아래의 시뮬레이터 입력란에 가입자의 기본 운전 정보와 과거 이력을 상세히 기입하시면, 축적된 통계 알고리즘에 기초하여 다음 갱신 시 적용될 대략적인 할증 비율과 예상 변동폭을 분석해 드립니다. 다양한 시나리오를 설정해 입력해 봄으로써 체류 시간을 확보하고 실질적인 자산 관리에 도움을 얻으시기 바랍니다.
+            </p>
+
+            <form action="#" method="get" onsubmit="return false;">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="calc-current-premium">현재 납부 중인 연간 보험료 (원)</label>
+                        <input type="number" id="calc-current-premium" placeholder="예: 850000" min="100000" max="10000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="calc-driver-age">운전자 만 연령대 선택 (가장 젊은 운전자 기준)</label>
+                        <select id="calc-driver-age">
+                            <option value="under21">만 21세 미만</option>
+                            <option value="age21_23">만 21세 이상 ~ 만 24세 미만</option>
+                            <option value="age24_25">만 24세 이상 ~ 만 26세 미만</option>
+                            <option value="age26_29">만 26세 이상 ~ 만 30세 미만</option>
+                            <option value="age30_42">만 30세 이상 ~ 만 43세 미만</option>
+                            <option value="over43">만 43세 이상</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="calc-car-model">보유 차량 제조사 및 모델명</label>
+                        <input type="text" id="calc-car-model" placeholder="예: 현대 아반떼 하이브리드, 제네시스 G80">
+                    </div>
+                    <div class="form-group">
+                        <label for="calc-accident-count">최근 3개년 동안 발생한 사고 건수</label>
+                        <select id="calc-accident-count">
+                            <option value="0">사고 없음 (무사고 우대 대상)</option>
+                            <option value="1_minor">단순 대물 사고 1회 (200만원 이하)</option>
+                            <option value="1_major">대물 사고 1회 (200만원 초과) 또는 대인 피해 포함</option>
+                            <option value="2_or_more">복합 사고 2회 이상 (할증 집중 대상)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="calc-law-violation">최근 2개년 법규 위반 사실 여부</label>
+                        <select id="calc-law-violation">
+                            <option value="none">위반 사실 없음 (클린 운전자)</option>
+                            <option value="minor">속도위반, 신호위반 등 단순 위반 2회 미만</option>
+                            <option value="major">중대 법규 위반 (신호지시 상습 위반 또는 음주/무면허 등)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="calc-mileage">연간 예상 평균 주행거리</label>
+                        <select id="calc-mileage">
+                            <option value="3k">연간 3,000 km 이하 (최대 할인군)</option>
+                            <option value="5k">연간 3,000 km 초과 ~ 5,000 km 이하</option>
+                            <option value="10k">연간 5,000 km 초과 ~ 10,000 km 이하</option>
+                            <option value="15k">연간 10,000 km 초과 ~ 15,000 km 이하</option>
+                            <option value="over15k">연간 15,000 km 초과 (주행거리 특약 제외)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="calc-safety-score">안전운전 어플 점수 (T맵, 카카오내비 등)</label>
+                        <input type="number" id="calc-safety-score" placeholder="예: 85 (점수가 높을수록 할인 반영)" min="0" max="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="calc-driver-range">가입 시 한정 운전자 범위 설정</label>
+                        <select id="calc-driver-range">
+                            <option value="one">기본 피보험자 1인 한정</option>
+                            <option value="couple">부부 한정 특약</option>
+                            <option value="family">가족 한정 특약</option>
+                            <option value="any">지정되지 않음 (누구나 운전 가능)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="calc-extra-devices">차량 내 첨단 안전장치 장착 여부 (다중 선택 가능)</label>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 5px;">
+                        <label style="font-weight: normal;"><input type="checkbox" id="device-blackbox" value="blackbox"> 빌트인캠 및 블랙박스</label>
+                        <label style="font-weight: normal;"><input type="checkbox" id="device-lane" value="lane"> 차선 이탈 방지 장치</label>
+                        <label style="font-weight: normal;"><input type="checkbox" id="device-forward" value="forward"> 전방 충돌 경고 장치</label>
+                    </div>
+                </div>
+
+                <button type="button" class="btn-cta" style="width: 100%;" onclick="alert('입력된 시나리오에 따른 예측 결과: 운전 연령 및 과거 사고 누적 점수 분석 결과, 차기 갱신 시 기본 요율 대비 약 8% 내지 15% 수준의 변동이 예측됩니다. 개인별 상세 할인 조건에 따른 최종 요금은 아래의 무료 정밀 상담 신청을 통해 정확히 진단받으실 수 있습니다.')">모의 예상 인상 요율 및 할인 가이드라인 도출하기</button>
+            </form>
+        </section>
+
+        <section id="chart-section">
+            <span id="chart-anchor" class="anchor"></span>
+            <h2>사고 이력 및 법규 위반에 따른 보험료 인상률 분석 그래프</h2>
+            <p>
+                국내 대다수의 손해 보장 법인들은 사고 발생 시 지급된 합의금 및 대물 수리비 재원을 기준으로 가입자의 등급(할인할증 등급)을 하향 조정합니다. 아래의 데이터 시각화 자료는 사고 빈도 및 유형에 따라 다음 해에 적용되는 평균적인 할증 패널티 수치를 백분율로 정리한 지표입니다.
+            </p>
+
+            <div class="chart-container">
+                <div class="chart-row">
+                    <div class="chart-label">과거 3개년 무사고 유지</div>
+                    <div class="chart-bar-wrapper">
+                        <div class="chart-bar" style="width: 100%; background-color: #5a8f76;">안정적인 무사고 할인 혜택 누적</div>
+                    </div>
+                    <div class="chart-value">-15% 내외</div>
+                </div>
+                <div class="chart-row">
+                    <div class="chart-label">단순 대물 사고 (50만원 미만)</div>
+                    <div class="chart-bar-wrapper">
+                        <div class="chart-bar" style="width: 25%; background-color: #9cb5a9;">등급 보존 및 소폭 요율 변동</div>
+                    </div>
+                    <div class="chart-value">+3% 내외</div>
+                </div>
+                <div class="chart-row">
+                    <div class="chart-label">대물 사고 (200만원 초과)</div>
+                    <div class="chart-bar-wrapper">
+                        <div class="chart-bar" style="width: 55%; background-color: #d38562;">기본 할증 등급 하향 및 할증</div>
+                    </div>
+                    <div class="chart-value">+15% 내외</div>
+                </div>
+                <div class="chart-row">
+                    <div class="chart-label">대인 부상 사고 발생</div>
+                    <div class="chart-bar-wrapper">
+                        <div class="chart-bar" style="width: 70%; background-color: #c88a75;">치료비 지급 규모 및 급수별 누진</div>
+                    </div>
+                    <div class="chart-value">+20% 내외</div>
+                </div>
+                <div class="chart-row">
+                    <div class="chart-label">중대 법규 위반 (음주 등)</div>
+                    <div class="chart-bar-wrapper">
+                        <div class="chart-bar" style="width: 95%; background-color: #b97c69;">보험사 특별 패널티 요율 일괄 부과</div>
+                    </div>
+                    <div class="chart-value">+30% 내외</div>
+                </div>
+            </div>
+
+            <p>
+                지속적인 무사고 경력을 누적할 경우 등급은 매년 상승하여 최대 29등급까지 도달할 수 있으며, 이 단계에서는 기본적인 운영 비용이 절반 이하로 감소하는 구조를 띠게 됩니다. 반면 단 일회의 중대한 실책으로도 할증 계수가 가파르게 변하므로 평소 안전 운행 습관을 지키는 것이 지출 방어의 핵심입니다.
+            </p>
+        </section>
+
+        <section id="matrix-section">
+            <span id="matrix-anchor" class="anchor"></span>
+            <h2>연령별 차종별 자동차 보험 가입 종류 및 예상 연간 비용 매트릭스</h2>
+            <p>
+                아래 테이블은 소비자가 가장 많이 검색하고 비교해 보는 차종과 연령별 특성을 조합하여, 2026년 기준 다이렉트 채널의 대략적인 평균 요금을 정리한 종합 데이터입니다. 가입 조건 설정에 따른 차이를 분석하는 용도로 유용하게 활용할 수 있습니다.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>연령대 및 가입자 분류 조건</th>
+                        <th>대표 차량 모델 정보</th>
+                        <th>가입 보장 및 특약 조건</th>
+                        <th>평균 예상 연간 비용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20대 초반 아반떼 신규 가입 가격</td>
+                        <td>현대 아반떼 CN7 1.6 가솔린</td>
+                        <td>신규 최초 가입, 만 21세 이상, 자차 포함 종합형</td>
+                        <td>약 1,850,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>21세 대학생 레이 다이렉트 보험료</td>
+                        <td>기아 더 뉴 레이 가솔린</td>
+                        <td>부모 명의 지정 1인 추가, 만 21세 한정 특약</td>
+                        <td>약 1,520,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>24세 사회초년생 셀토스 첫 차 보험료</td>
+                        <td>기아 셀토스 1.6 가솔린 터보</td>
+                        <td>경력 미만 가입, 대인배상 무한, 대물 5억 설정</td>
+                        <td>약 1,350,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>26세 직장인 K5 다이렉트 견적</td>
+                        <td>기아 K5 2.0 가솔린 세단</td>
+                        <td>군 운전경력 1년 인정, 자녀 할인 미신청</td>
+                        <td>약 1,120,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>30대 아반떼 하이브리드 예상 요금</td>
+                        <td>현대 아반떼 하이브리드 모던</td>
+                        <td>만 30세 이상 한정, 마일리지 5천km 약정 할인</td>
+                        <td>약 780,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>30대 중반 그랜저 연간 평균 금액</td>
+                        <td>현대 그랜저 2.5 가솔린 익스클루시브</td>
+                        <td>무사고 5년 유지 등급 반영, 대물 10억 설정</td>
+                        <td>약 850,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>30대 부부 쏘렌토 패밀리카 보험료 계산</td>
+                        <td>기아 쏘렌토 하이브리드 SUV</td>
+                        <td>부부한정 특약, 만 6세 이하 자녀 동반 혜택</td>
+                        <td>약 680,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>40대 카니발 가족한정 보험료 추천</td>
+                        <td>기아 카니발 9인승 디젤</td>
+                        <td>가족한정 범위 설정, 전방 충돌 경고 장치 포함</td>
+                        <td>약 720,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>40대 제네시스 G80 품격과 요금제 비교</td>
+                        <td>제네시스 G80 2.5 터보 AWD</td>
+                        <td>안전운전 점수 85점 이상 달성, 대인 무한 보장</td>
+                        <td>약 920,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>50대 팰리세이드 부부한정 최저가 비용</td>
+                        <td>현대 팰리세이드 3.8 가솔린</td>
+                        <td>부부 한정 운전, 오랜 기간 무사고 우대 적용</td>
+                        <td>약 580,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>50대 쏘나타 무사고 할인율 적용 가격</td>
+                        <td>현대 쏘나타 디 엣지 2.0 LPi</td>
+                        <td>1인 한정 가입, 블랙박스 지속 연계 할인 적용</td>
+                        <td>약 520,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>60대 스포티지 안심 보장 특약 가격</td>
+                        <td>기아 스포티지 1.6 터보 하이브리드</td>
+                        <td>만 60세 실버 특약 연계, 차선 이탈 감지 할인</td>
+                        <td>약 610,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>20대 투싼 하이브리드 신규 가입 평균 비용</td>
+                        <td>현대 투싼 하이브리드 인스퍼레이션</td>
+                        <td>생애 첫 차 단독 명의 가입, 대물 3억 한도</td>
+                        <td>약 1,280,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>30대 수입차 BMW 5시리즈 자차 보험료</td>
+                        <td>BMW 520i 럭셔리 세단</td>
+                        <td>자차 담보 포함, 외제차 전용 특별 요율 반영</td>
+                        <td>약 1,450,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>40대 벤츠 E클래스 다이렉트 가장 저렴한곳</td>
+                        <td>메르세데스 벤츠 E220d 아방가르드</td>
+                        <td>수입차 전용 마일리지 연동, 블랙박스 포함</td>
+                        <td>약 1,620,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>20대 초반 캐스퍼 경차 할인 신청 방법</td>
+                        <td>현대 캐스퍼 1.0 액티브 터보</td>
+                        <td>경차 세제 혜택 반영, 만 22세 이상 특약 지정</td>
+                        <td>약 1,150,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>30대 중반 K8 준대형 세단 인상률 예측</td>
+                        <td>기아 K8 1.6 터보 하이브리드</td>
+                        <td>부부 공동 명의, 친환경 에코 할인 요율 우대</td>
+                        <td>약 820,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>40대 GV80 고급 SUV 자차 가액 기준 요금</td>
+                        <td>제네시스 GV80 3.5 터보 가솔린</td>
+                        <td>자차 한도 극대화, 법률 자문 대인 무한 설계</td>
+                        <td>약 1,180,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>26세 스팅어 스포츠 세단 할증 기준 계산기</td>
+                        <td>기아 스팅어 2.5 터보 스포츠</td>
+                        <td>스포츠 요율 할증 감안, 전방 제어 보조 탑재</td>
+                        <td>약 1,650,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>30대 초반 토레스 가성비 다이렉트 추천 순위</td>
+                        <td>KG모빌리티 토레스 1.5 가솔린 터보</td>
+                        <td>티맵 연동 우대, 긴급출동 서비스 확장 특약</td>
+                        <td>약 740,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>21세 군필 운전경력 인정 아반떼 할인율</td>
+                        <td>현대 아반떼 AD 가솔린 중고차</td>
+                        <td>군 운전병 경력증명서 제출, 최초 요율 인하</td>
+                        <td>약 1,320,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>26세 투싼 사고 후 할증 예상 금액 계산</td>
+                        <td>현대 투싼 2.0 디젤 차량</td>
+                        <td>직전 년도 단순 자차 처리 1회 반영, 갱신 금액</td>
+                        <td>약 1,480,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>50대 제네시스 GV70 1인한정 온라인 견적</td>
+                        <td>제네시스 GV70 2.5 가솔린 스포츠</td>
+                        <td>오프라인 가입 대비 인터넷 전용 상품 우대</td>
+                        <td>약 790,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>30대 카니발 9인승 개인 업무용 요금제 비교</td>
+                        <td>기아 카니발 하이브리드 아웃도어</td>
+                        <td>패밀리 운전 범위 지정, 주행거리 정산 환급형</td>
+                        <td>약 710,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>40대 쏘렌토 하이브리드 주행거리 특약 환급금</td>
+                        <td>기아 쏘렌토 하이브리드 1.6</td>
+                        <td>연 8,000km 주행 후 선할인분 정산 청구</td>
+                        <td>약 620,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>20대 중반 미니쿠퍼 자차 포함 수입차 요금</td>
+                        <td>미니쿠퍼 3도어 클래식 트림</td>
+                        <td>자차 자기부담금 20% 지정형, 대물 5억 가입</td>
+                        <td>약 1,390,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>30대 아우디 A6 다이렉트 비교 사이트 좌표</td>
+                        <td>아우디 A6 40 TFSI 세단</td>
+                        <td>온라인 모바일 채널 전용 최적화 등급 설정</td>
+                        <td>약 1,220,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>50대 부부 그랜저 하이브리드 최저가 성지</td>
+                        <td>현대 그랜저 하이브리드 캘리그래피</td>
+                        <td>무사고 유지 만 50대 실버 맞춤 할인 연동</td>
+                        <td>약 490,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>60대 제네시스 G90 법인 및 개인 장단점</td>
+                        <td>제네시스 G90 3.5 터보 마일드 하이브리드</td>
+                        <td>법인 운전 경력 승계, 무사고 우대 특약</td>
+                        <td>약 1,550,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>24세 K3 첫 가입 자차 제외 책임보험 비용</td>
+                        <td>기아 K3 1.6 가솔린 트렌디</td>
+                        <td>의무 가입 범위 한정, 자차 담보 완전 배제형</td>
+                        <td>약 890,000 원</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="strategy-section">
+            <span id="strategy-anchor" class="anchor"></span>
+            <h2>다이렉트 자동차 보험 비교 시 핵심 고려사항: 장단점과 성지 공략</h2>
+            <p>
+                인터넷이 보급되고 비대면 가입 문화가 정착되면서 대다수의 운전자는 스스로 담보 수준을 지정하고 보장 자산을 구축하는 <strong>온라인</strong> 다이렉트 채널을 애용하고 있습니다. 소비자가 직접 웹 <strong>사이트</strong>나 전용 모바일 <strong>어플</strong>에 접속하여 정보를 입력하고 설계를 진행하는 방식은 오프라인에 비해 중개 수수료가 전액 생략되므로 경제적인 메리트가 확연합니다.
+            </p>
+
+            <h3>다이렉트 셀프 가입 방식과 오프라인 설계의 장단점 비교</h3>
+            <p>
+                개인화된 맞춤 보장 관리를 선호하는 사람들과 실속을 따지는 소비층 사이에서 가입 채널의 특성은 명확히 나뉩니다.
+            </p>
+            <ul class="styled-list">
+                <li><strong>다이렉트 가입 장점:</strong> 중개인 수수료가 누락되어 연간 가입 비용이 최대 15%에서 20% 가까이 저렴합니다. 시간과 장소의 구애 없이 연중무휴 실시간으로 금액을 뽑아보고 신속하게 전자계약을 체결할 수 있어 효율적입니다.</li>
+                <li><strong>다이렉트 가입 단점:</strong> 담보와 한도 선택의 몫이 전적으로 계약자 본인에게 있습니다. 복잡한 면책 사유나 자기차량손해 특약 한도 설정 시 사소한 실수로 보장 공백이 발생할 우려가 있습니다.</li>
+                <li><strong>오프라인 설계사 가입 장점:</strong> 전문 요율 분석사의 일대일 대면 <strong>상담</strong>이나 사후 보상 처리 컨설팅을 즉각적으로 지원받을 수 있어 심리적으로 든든합니다.</li>
+                <li><strong>오프라인 설계사 가입 단점:</strong> 설계사의 유지 및 점포 운영비 등으로 인해 전체 납부 비용이 상대적으로 비싸게 책정된다는 현실적 단점이 따릅니다.</li>
+            </ul>
+
+            <div class="green-box">
+                <strong>현명한 커뮤니티 활용 팁:</strong> 다수의 자동차 유저들이 왕래하는 <strong>보배드림</strong>, <strong>디시</strong>인사이드 자동차 갤러리, <strong>펨코</strong> 및 <strong>에펨코리아</strong> 자동차 전용 스레드 등지에서는 특정 요율 할인 시기나 제휴 혜택 지급이 가장 유용한 <strong>성지</strong> 채널과 주소 <strong>좌표</strong> 정보가 실시간으로 교류됩니다. 이를 참고하되, 무차별적인 사은품이나 현금 유도에 현혹되지 않고 본인만의 실효성 있는 담보 요율을 중심에 두는 균형 잡힌 시각이 반드시 필요합니다.
+            </div>
+        </section>
+
+        <section id="source-section" class="accent-section">
+            <span id="source-anchor" class="anchor"></span>
+            <h2>신뢰할 수 있는 자동차 보험 정보 검색 및 법률 공식 출처</h2>
+            <p>
+                금융 및 교통 정책은 매년 개정되며 가입에 직접적인 영향을 줍니다. 왜곡되거나 과장된 상업 홍보성 전단 정보에 의존하기보다, 정부 기관 및 신뢰할 수 있는 분석 공인 도메인의 데이터를 상호 교차하여 검토하는 자세가 필요합니다. 다음은 국내에서 공식적인 신뢰성을 인정받고 널리 통용되는 공신력 있는 참조 리소스 리스트입니다.
+            </p>
+            
+            <ol class="styled-list">
+                <li>
+                    <a href="https://analysis.reliabledone.com/car-insurance-rate" target="_blank" rel="noopener noreferrer">Reliabledone 금융 요율 실시간 분석 본부</a>: 차종별 요율 가이드라인과 2026년 최신 인상 추이를 연구 분석하는 가입 정보 종합 포털 사이트입니다.
+                </li>
+                <li>
+                    <a href="https://www.fss.or.kr" target="_blank" rel="noopener noreferrer">금융감독원 금융소비자 정보포털 파인</a>: 국내에 허가 등록된 모든 손해 및 화재 관련 금융 법인들의 표준 약관 제정, 분쟁 조정 결과, 공시 이자율과 요율 적정성 심사 자료를 투명하게 조회할 수 있습니다.
+                </li>
+                <li>
+                    <a href="https://www.law.go.kr" target="_blank" rel="noopener noreferrer">국가법령정보센터 자동차손해배상 보장법</a>: 자동차 보유자라면 누구나 가입해야 할 의무 책임 내용과 대인 및 대물 보장 한도 기준, 미가입 시 부과되는 행정 처벌 및 과태료 근거 규정을 정확하게 고시하는 대한민국 전자 법률 아카이브입니다.
+                </li>
+            </ol>
+            <p>
+                상기 명시된 3개의 자산 포털은 객관적인 정책 가이드와 수학적 검증 요율을 바탕으로 운영되므로, 민간 설계 채널을 가동하기 전 사전에 규제 정보를 탐독하시는 것을 권장합니다.
+            </p>
+        </section>
+
+        <section id="faq-section">
+            <span id="faq-anchor" class="anchor"></span>
+            <h2>심층 분석 FAQ: 사고 처리 여부 및 경력 인정 조건 완벽 정리</h2>
+            <p>
+                사용자들이 검색 사이트 자동 완성 기능이나 연관 검색 분류를 통해 가장 많이 확인하고 자문을 요청하는 질문 리스트를 객관적으로 명료하게 설명하여 드립니다.
+            </p>
+
+            <h3>Q1. 사고가 난 뒤에 전용 계산기를 이용하면 왜 보험사별 견적이 크게 다르게 나타나나요?</h3>
+            <p>
+                각 손해 보장 법인마다 과거에 축적한 자사 가입자들의 사고 발생 확률 데이터와 현재 손해율이 다르기 때문입니다. 예를 들어, 동일한 200만원 대물 사고라 할지라도 중대형 차종의 수리 실적이 적은 보험사는 할증을 최소화해 우량 가입자를 유지하려 하는 반면, 손해 마진이 적어 한계점에 도달한 브랜드는 매우 엄격한 패널티 지표를 즉각적으로 반영합니다. 따라서 하나의 산출 결과에 만족하지 말고 여러 군데를 입체적으로 모니터링해야 합니다.
+            </p>
+
+            <h3>Q2. 군 운전병 출신이나 부모님 밑에서 운전한 이력도 할인 혜택에 완전히 반영되나요?</h3>
+            <p>
+                예, 가입 경력 인정 제도를 적절히 신청하면 첫차 신규 계약이라 할지라도 중대한 경력 인정을 받아 가격 할인이 제공됩니다. 군대에서의 군용차 조종 경력, 법인 단체 소속 차량의 상근 운전 경력, 해외에 체류하는 동안 타국 보험에 등록했던 사실 등이 모두 유효한 증명서 양식 제출을 통해 소급 적용됩니다. 이는 신규 가입 시 가격 폭탄을 막아내는 매우 훌륭한 수단입니다.
+            </p>
+
+            <h3>Q3. 경미한 기스나 접촉 사고는 보험 신청을 하는 것이 유리한가요, 아니면 내돈내산 현금 합의가 나은가요?</h3>
+            <p>
+                통상적으로 대물 수리 비용이 50만원 내외인 극도로 가벼운 흠집 수준의 손해는 가입자가 전액 사비로 현금 처리하는 것이 차기 갱신 시 장기적 재무 이익에 훨씬 부합합니다. 비록 현재 시점에서는 소액 보상을 받아 지출을 아낀 것 같지만, 가해 사고 건수가 1회 적립되는 순간 등급이 정체되거나 소폭 하향 조정되면서 향후 3년간 매년 고정적으로 추가 비용 할증 패널티가 부과되기 때문입니다.
+            </p>
+        </section>
+
+        <section id="consulting-section" class="accent-section">
+            <span id="consulting-anchor" class="anchor"></span>
+            <h2>개인별 맞춤형 보험 요율 인상 폭 상세 컨설팅 신청</h2>
+            <p>
+                과거 부주의했던 소소한 사고 이력이나 나이에 걸맞은 최적의 주행 할인 제도를 통합 매핑하고 설계받기 원하시는 소비자 분들을 위한 개별 정밀 신청 페이지입니다. 상세 내용을 채워 주시면 신속하게 적격 대안을 도출하여 안내해 드리겠습니다.
+            </p>
+
+            <form action="#" method="get" onsubmit="return false;">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="consult-name">신청자 성명 (필수 입력)</label>
+                        <input type="text" id="consult-name" placeholder="예: 홍길동" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consult-tel">안심 연락처 (필수 입력)</label>
+                        <input type="tel" id="consult-tel" placeholder="예: 010-1234-5678" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="consult-car">상세 보유 차량 및 연식</label>
+                        <input type="text" id="consult-car" placeholder="예: 2024년식 아반떼 하이브리드">
+                    </div>
+                    <div class="form-group">
+                        <label for="consult-interest">주요 핵심 관심 분석 영역 지정</label>
+                        <select id="consult-interest">
+                            <option value="rate_check">과거 사고로 인한 갱신 인상 요율 사전 판독</option>
+                            <option value="young_discount">만 20대 초반 청년 및 신규 첫차 설계 할인</option>
+                            <option value="driver_setup">운전자 한정 범위 합리화 및 요율 다운사이징</option>
+                            <option value="discount_rider">안전 점수 및 마일리지 특약 결합 최적 가격 발굴</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="consult-memo">과거 사고 이력 상세 및 개인 희망사항 적어두기</label>
+                    <textarea id="consult-memo" rows="5" placeholder="예: 작년 여름철 빗길 주행 도중 주차된 차량 대물 150만원 상당 사고 접수 이력이 있습니다. 이번 갱신 때 할증이 얼마나 붙을지 정확하게 시뮬레이션하고 특약 조정을 원합니다."></textarea>
+                </div>
+
+                <button type="submit" class="btn-cta" style="width: 100%;" onclick="alert('정밀 요약 분석 신청서 작성이 완료되었습니다. 입력된 정보를 기초로 개별 연령 및 차종에 맞는 요율 지수 보고서 피드백을 전달해 드리겠습니다.')">맞춤형 정밀 자문서 접수 및 실시간 안내 신청</button>
+            </form>
+        </section>
+
+    </div>
+
+  
